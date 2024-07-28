@@ -2,7 +2,7 @@ package lecture.aop;
 
 import lecture.aop.order.OrderRepository;
 import lecture.aop.order.OrderService;
-import lecture.aop.order.aop.AspectV3;
+import lecture.aop.order.aop.AspectV4Pointcut;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
@@ -18,7 +18,8 @@ import org.springframework.test.context.TestConstructor;
 @SpringBootTest
 //@Import(AspectV1.class) // 간단하게 스프링 빈에 추가하는 방법. 주로 설정 파일을 추가할 때 사용
 //@Import(AspectV2.class)
-@Import(AspectV3.class)
+//@Import(AspectV3.class)
+@Import(AspectV4Pointcut.class)
 public class AOPTest {
 
   private final OrderService orderService;
