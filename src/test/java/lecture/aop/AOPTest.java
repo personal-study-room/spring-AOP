@@ -2,7 +2,7 @@ package lecture.aop;
 
 import lecture.aop.order.OrderRepository;
 import lecture.aop.order.OrderService;
-import lecture.aop.order.aop.AspectV5Order;
+import lecture.aop.order.aop.AspectV6Advice;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
@@ -20,7 +20,8 @@ import org.springframework.test.context.TestConstructor;
 //@Import(AspectV2.class)
 //@Import(AspectV3.class)
 //@Import(AspectV4Pointcut.class)
-@Import({AspectV5Order.LogAspect.class, AspectV5Order.TransactionAspect.class})
+//@Import({AspectV5Order.LogAspect.class, AspectV5Order.TransactionAspect.class})
+@Import(AspectV6Advice.class)
 public class AOPTest {
 
   private final OrderService orderService;
